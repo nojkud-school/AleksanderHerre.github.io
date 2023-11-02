@@ -1,0 +1,27 @@
+#hei {
+    text-align: center;
+    text-size-adjust: 100%;
+    font-style: italic;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 2.5s;
+}
+
+.visible {
+    opacity: 1;
+}
+
+#image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    border-color: black;
+}

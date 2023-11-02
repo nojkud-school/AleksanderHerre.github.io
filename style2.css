@@ -1,0 +1,103 @@
+#welcome {
+    text-align: center;
+    margin-top: 80px; /* Adjust the margin value as needed */
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+.visible {
+    opacity: 1;
+}
+
+
+
+table {
+    margin-top: 30px; /* Adjust the margin value as needed */
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 10px;
+}
+
+th {
+    background-color: lightgrey;
+}
+
+
+
+
+.event {
+    background-color: lightblue;
+}
+
+.empty-cell {
+   opacity: 0;
+}
+
+#friminut {
+    height: 15px; /* Adjust the height value as needed */
+}
+
+#små {
+    height: 5px;
+}
+
+#samfunnsfag{
+    background-color: lightblue;
+}
+
+#norsk{
+    background-color: cadetblue;
+}
+
+#YFF {
+    background-color: lightgreen;
+}
+
+#driftstøtte{
+    background-color: orange;   
+}
+
+#utvikling{
+    background-color: beige;
+    
+}
+
+#kroppsøving{
+    background-color: blueviolet;
+}
+
+#brukerstøtte{
+    background-color: greenyellow;
+}
+
+
+.split-cell {
+    position: relative;
+}
+
+.top-half {
+    text-align: center;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.bottom-half {
+    text-align: center;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

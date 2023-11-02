@@ -1,0 +1,25 @@
+#topBarContainer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    border-bottom: 1px solid black;
+    border-bottom-left-radius: 10px; /* Adjust the radius as needed */
+    border-bottom-right-radius: 10px; /* Adjust the radius as needed */
+}
+
+.w3-padding.w3-xlarge a i {
+    font-size: 34px; /* Adjust the font size as needed */
+    vertical-align: middle; /* Align the icons vertically */
+    margin-right: -10px;
+    /* Adjust the margin to create space between the icons */
+}
+
+#home {
+    font-size: 36px;
+}
+
+#iconTa {
+    margin-left: 15px;
+}

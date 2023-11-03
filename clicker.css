@@ -6,12 +6,14 @@
 
 #apple{
     scale: 5%;
+    position: fixed;
+    left: 75%;
 }
 
 #twoX{
     position: fixed;
     top: 50%;
-    left: 25%;
+    left: 35%;
     background-color: lightblue;
     border-radius: 5px;
 }

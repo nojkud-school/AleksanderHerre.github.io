@@ -15,7 +15,7 @@
 #cart {
     position: fixed;
     top: 50%;
-    left: 40%;
+    left: 45%;
     transform: translate(-50%, -50%);
     width: 200px;
     height: 250px;

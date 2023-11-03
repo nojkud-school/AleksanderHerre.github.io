@@ -7,7 +7,8 @@
 #apple{
     scale: 5%;
     position: fixed;
-    left: 75%;
+    text-align: center;
+    left: 100;
 }
 
 #twoX{
@@ -17,6 +18,7 @@
     background-color: lightblue;
     border-radius: 5px;
 }
+
 
 #cart {
     position: fixed;

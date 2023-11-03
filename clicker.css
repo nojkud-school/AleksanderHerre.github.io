@@ -4,6 +4,10 @@
     100% { transform: scale(1); }
 }
 
+#apple{
+    scale: 5%;
+}
+
 #twoX{
     position: fixed;
     top: 50%;

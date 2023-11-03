@@ -3,6 +3,7 @@ let funds = parseInt(localStorage.getItem('funds')) || 0;
 let upgradeCost = 50;
 let isUpgraded = localStorage.getItem('isUpgraded') === 'true';
 
+
 const counter = document.getElementById('counter');
 const resetButton = document.getElementById('reset');
 const twoXButton = document.getElementById('twoX');

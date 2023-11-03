@@ -46,5 +46,7 @@ const clickHandler = () => {
     localStorage.setItem('clickCount', count);
 };
 
+
+
 cart.addEventListener('click', clickHandler);
 

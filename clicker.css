@@ -4,33 +4,44 @@
     100% { transform: scale(1); }
 }
 
+#twoX{
+    position: fixed;
+    top: 50%;
+    left: 25%;
+}
+
 #cart {
     position: fixed;
     top: 50%;
-    left: 43%;
+    left: 40%;
+    transform: translate(-50%, -50%);
     width: 200px;
     height: 250px;
     cursor: grab;
     animation: breath 10s infinite;
 }
+
 #counter {
     text-align: center;
     position: fixed;
     top: 35%;
-    left: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 24px;
 }
 
-#Ctext{
+#Ctext {
     text-align: center;
     position: fixed;
     top: 40%;
-    left: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-#reset{
+#reset {
     text-align: center;
     position: fixed;
     top: 30%;
-    left: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

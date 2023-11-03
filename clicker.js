@@ -49,5 +49,7 @@ const clickHandler = () => {
 
 
 
+
+
 cart.addEventListener('click', clickHandler);
 

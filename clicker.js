@@ -85,3 +85,4 @@ resetButton.addEventListener('click', () => {
     twoXButton.textContent = `2X $${twoXcost}`;
     autoclickButton.textContent = `1Clk Second  $${autoclickcost}`;
 });
+

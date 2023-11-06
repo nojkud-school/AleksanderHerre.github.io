@@ -4,14 +4,13 @@
     100% { transform: scale(1); }
 }
 
-#apple{
-    scale: 5%;
-    position: fixed;
-    text-align: center;
-    left: 100;
+#apple {
+    width: 50px;
+    height: 50px;
+    cursor: grab;
 }
 
-#twoX{
+#twoX {
     position: fixed;
     top: 50%;
     left: 35%;
@@ -19,14 +18,13 @@
     border-radius: 5px;
 }
 
-#autoclick{
+#autoclick {
     position: fixed;
     top: 45%;
     left: 35%;
     background-color: lightblue;
     border-radius: 5px;
 }
-
 
 #cart {
     position: fixed;

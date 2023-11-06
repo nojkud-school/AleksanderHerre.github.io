@@ -1,7 +1,7 @@
 let count = parseInt(localStorage.getItem('clickCount')) || 0;
 let funds = parseInt(localStorage.getItem('funds')) || 0;
-let twoXcost = 1;
-let autoclickcost = 1;
+let twoXcost = 50;
+let autoclickcost = 100;
 let isTwoXUpgraded = localStorage.getItem('isTwoXUpgraded') === 'true';
 let isAutoclickUpgraded = localStorage.getItem('isAutoclickUpgraded') === 'true';
 

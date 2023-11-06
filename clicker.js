@@ -89,7 +89,6 @@ resetButton.addEventListener('click', () => {
 
 const canvas = document.getElementById('gameCanvas')
 
-apple.addEventListener('click', appleclickHandler)
 function spawnRandomObject() {
     if (!appleSpawned) {
         const randomX = Math.random() * canvas.width;
@@ -107,3 +106,5 @@ const appleclickHandler = () => {
     counter.textContent = "$" + count;
     localStorage.setItem('clickCount', count);
 };
+
+apple.addEventListener('click', appleclickHandler);

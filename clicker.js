@@ -88,9 +88,6 @@ resetButton.addEventListener('click', () => {
 });
 
 
-
-let appleSpawned = false;
-
 const canvas = document.getElementById('gameCanvas');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -104,17 +101,15 @@ const appleclickHandler = () => {
 apple.addEventListener('click', appleclickHandler);
 
 function spawnRandomObject() {
-    if (!appleSpawned) {
-        const randomX = Math.random() * (canvas.width - apple.width);
-        const randomY = Math.random() * (canvas.height - apple.height);
-        apple.style.position = "absolute";
-        apple.style.left = randomX + "px";
-        apple.style.top = randomY + "px";
-        appleSpawned = true;
-    }
+    const appleWidth = apple.offsetWidth;
+    const appleHeight = apple.offsetHeight;
+    const randomX = Math.random() * (canvas.width - appleWidth);
+    const randomY = Math.random() * (canvas.height - appleHeight);
+    apple.style.position = "absolute";
+    apple.style.left = randomX + "px";
+    apple.style.top = randomY + "px";
 }
-spawnRandomObject();
 
 setInterval(() => {
     spawnRandomObject();
-}, 4000);
+}, 2000);

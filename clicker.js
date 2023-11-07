@@ -93,12 +93,14 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const appleclickHandler = () => {
-    count += 500;
+    count += 25;
     counter.textContent = "$" + count;
     localStorage.setItem('clickCount', count);
 };
 
 apple.addEventListener('click', appleclickHandler);
+
+let intervalId;
 
 function spawnRandomObject() {
     const appleWidth = apple.offsetWidth;
@@ -108,8 +110,16 @@ function spawnRandomObject() {
     apple.style.position = "absolute";
     apple.style.left = randomX + "px";
     apple.style.top = randomY + "px";
+    appleSpawned = true;
+    setTimeout(() => {
+        apple.style.visibility = "hidden";
+        appleSpawned = false;
+    }, 5000);
 }
 
-setInterval(() => {
+intervalId = setInterval(() => {
     spawnRandomObject();
-}, 2000);
+    setTimeout(() => {
+        apple.style.visibility = "visible";
+    }, 10000);
+}, 10000);

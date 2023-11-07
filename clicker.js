@@ -87,19 +87,13 @@ resetButton.addEventListener('click', () => {
     autoclickButton.textContent = `1Clk Second  $${autoclickcost}`;
 });
 
-const canvas = document.getElementById('gameCanvas')
 
-function spawnRandomObject() {
-    if (!appleSpawned) {
-        const randomX = Math.random() * canvas.width;
-        const randomY = Math.random() * canvas.height;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(apple, randomX, randomY);
-        appleSpawned = true;
-    }
-}
 
-setInterval(spawnRandomObject, 1000);
+let appleSpawned = false;
+
+const canvas = document.getElementById('gameCanvas');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 const appleclickHandler = () => {
     count += 500;
@@ -108,3 +102,19 @@ const appleclickHandler = () => {
 };
 
 apple.addEventListener('click', appleclickHandler);
+
+function spawnRandomObject() {
+    if (!appleSpawned) {
+        const randomX = Math.random() * (canvas.width - apple.width);
+        const randomY = Math.random() * (canvas.height - apple.height);
+        apple.style.position = "absolute";
+        apple.style.left = randomX + "px";
+        apple.style.top = randomY + "px";
+        appleSpawned = true;
+    }
+}
+spawnRandomObject();
+
+setInterval(() => {
+    spawnRandomObject();
+}, 4000);

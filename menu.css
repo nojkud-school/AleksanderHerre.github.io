@@ -3,7 +3,7 @@
     top: 0;
     width: 100%;
     z-index: 1000;
-    background-color: white;
+    background-color: #F5F5F5;
     border-bottom: 1px solid black;
     border-bottom-left-radius: 10px; /* Adjust the radius as needed */
     border-bottom-right-radius: 10px; /* Adjust the radius as needed */

@@ -102,6 +102,8 @@ apple.addEventListener('click', appleclickHandler);
 
 let intervalId;
 
+
+
 function spawnRandomObject() {
     const appleWidth = apple.offsetWidth;
     const appleHeight = apple.offsetHeight;
@@ -110,16 +112,15 @@ function spawnRandomObject() {
     apple.style.position = "absolute";
     apple.style.left = randomX + "px";
     apple.style.top = randomY + "px";
+    apple.style.visibility = "visible";
     appleSpawned = true;
     setTimeout(() => {
         apple.style.visibility = "hidden";
         appleSpawned = false;
+        setTimeout(() => {
+            spawnRandomObject();
+        }, 3000);
     }, 5000);
 }
 
-intervalId = setInterval(() => {
-    spawnRandomObject();
-    setTimeout(() => {
-        apple.style.visibility = "visible";
-    }, 10000);
-}, 10000);
+spawnRandomObject();

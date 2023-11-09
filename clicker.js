@@ -119,8 +119,23 @@ function spawnRandomObject() {
         appleSpawned = false;
         setTimeout(() => {
             spawnRandomObject();
-        }, 3000);
-    }, 5000);
+        }, 1000);
+    }, 1000);
 }
 
 spawnRandomObject();
+
+
+function checkOverlap() {
+    const elements = document.elementsFromPoint(
+        parseInt(apple.style.left) + apple.offsetWidth / 2,
+        parseInt(apple.style.top) + apple.offsetHeight / 2
+    );
+
+    for (let element of elements) {
+        if (element.tagName.toLowerCase() !== "img") {
+            return true;
+        }
+    }
+    return false;
+}

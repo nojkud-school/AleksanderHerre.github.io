@@ -117,10 +117,12 @@ function spawnRandomObject() {
     setTimeout(() => {
         apple.style.visibility = "hidden";
         appleSpawned = false;
+
+        // fart på eple
         setTimeout(() => {
             spawnRandomObject();
-        }, 10000);
-    }, 5000);
+        }, 100);
+    }, 200);
 }
 
 spawnRandomObject();

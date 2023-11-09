@@ -50,7 +50,7 @@
 }
 
 #Teple {
-    position: absolute;
+    position: fixed;
     text-align: center;
     top: 35%; /* Adjust the value as needed */
     left: 50%; /* Adjust the value as needed */

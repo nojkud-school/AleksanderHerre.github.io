@@ -121,8 +121,8 @@ function spawnRandomObject() {
         // fart på eple
         setTimeout(() => {
             spawnRandomObject();
-        }, 15000);
-    }, 2000);
+        }, 80000);
+    }, 4000);
 }
 
 spawnRandomObject();

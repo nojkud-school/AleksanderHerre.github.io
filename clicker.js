@@ -119,8 +119,8 @@ function spawnRandomObject() {
         appleSpawned = false;
         setTimeout(() => {
             spawnRandomObject();
-        }, 1000);
-    }, 1000);
+        }, 10000);
+    }, 5000);
 }
 
 spawnRandomObject();

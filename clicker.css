@@ -40,7 +40,7 @@
 #counter {
     text-align: center;
     position: fixed;
-    top: 35%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 24px;
@@ -49,6 +49,12 @@
     width: auto;
 }
 
+#Teple {
+    position: absolute;
+    text-align: center;
+    top: 32.5vh; /* Adjust the value as needed */
+    left: 47.25vw; /* Adjust the value as needed */
+}
 #Ctext {
     text-align: center;
     position: fixed;
@@ -60,7 +66,7 @@
 #reset {
     text-align: center;
     position: fixed;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: lightcoral;

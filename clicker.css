@@ -52,8 +52,9 @@
 #Teple {
     position: absolute;
     text-align: center;
-    top: 32.5vh; /* Adjust the value as needed */
-    left: 47.25vw; /* Adjust the value as needed */
+    top: 35%; /* Adjust the value as needed */
+    left: 50%; /* Adjust the value as needed */
+    transform: translate(-50%, -50%);
 }
 #Ctext {
     text-align: center;

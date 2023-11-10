@@ -12,8 +12,8 @@ const autoclickButton = document.getElementById('autoclick');
 const apple = document.getElementById('apple')
 
 counter.textContent = "$" + count;
-twoXButton.textContent = isTwoXUpgraded ? "Kjøpt" : `2X $${twoXcost}`;
-autoclickButton.textContent = isAutoclickUpgraded ? "Kjøpt" : `1Clk Second  $${autoclickcost}`;
+twoXButton.textContent = isTwoXUpgraded ? "handlet" : `2X $${twoXcost}`;
+autoclickButton.textContent = isAutoclickUpgraded ? "handlet" : `1Clk Second  $${autoclickcost}`;
 
 twoXButton.addEventListener('click', () => {
     if (!isTwoXUpgraded && count >= twoXcost) {
@@ -24,11 +24,11 @@ twoXButton.addEventListener('click', () => {
         localStorage.setItem('clickCount', count);
         localStorage.setItem('funds', funds);
         localStorage.setItem('isTwoXUpgraded', isTwoXUpgraded);
-        twoXButton.textContent = "Kjøpt";
+        twoXButton.textContent = "handlet";
     } else if (isTwoXUpgraded) {
-        alert("2x er allerede kjøpt.");
+        alert("Du eier allerede 2x.");
     } else {
-        alert("få mer penger.");
+        alert("Skaf deg mer penger.");
     }
 });
 
@@ -41,12 +41,12 @@ autoclickButton.addEventListener('click', () => {
         localStorage.setItem('clickCount', count);
         localStorage.setItem('funds', funds);
         localStorage.setItem('isAutoclickUpgraded', isAutoclickUpgraded);
-        autoclickButton.textContent = "Kjøpt";
+        autoclickButton.textContent = "handlet";
         setInterval(autoclickclickHandler, 500);
     } else if (isAutoclickUpgraded) {
-        alert("autoclick er allerede kjøpt.");
+        alert("Du eier allerede autoclicker.");
     } else {
-        alert("få mer penger.");
+        alert("Skaf deg mer penger.");
     }
 });
 

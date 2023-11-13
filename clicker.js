@@ -21,7 +21,7 @@ twoXButton.addEventListener('click', () => {
         count -= twoXcost;
         isTwoXUpgraded = true;
         counter.textContent = "$" + count;
-        localStorage.setItem('clickCount', count);
+        localStorage.setItem('clickCount', count);  
         localStorage.setItem('funds', funds);
         localStorage.setItem('isTwoXUpgraded', isTwoXUpgraded);
         twoXButton.textContent = "handlet";
@@ -93,7 +93,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const appleclickHandler = () => {
-    count += 20;
+    count += 25;
     counter.textContent = "$" + count;
     localStorage.setItem('clickCount', count);
 };

@@ -93,7 +93,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const appleclickHandler = () => {
-    count += 25;
+    count += 20;
     counter.textContent = "$" + count;
     localStorage.setItem('clickCount', count);
 };

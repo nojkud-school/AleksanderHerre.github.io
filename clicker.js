@@ -72,7 +72,7 @@ cart.addEventListener('click', twoXclickHandler);
 
 if (isAutoclickUpgraded) {
     // fart på autoclicker
-    setInterval(autoclickclickHandler, 500);
+    setInterval(autoclickclickHandler, 1000);
 }
 
 resetButton.addEventListener('click', () => {

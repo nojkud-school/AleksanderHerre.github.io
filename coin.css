@@ -96,14 +96,11 @@ body {
     justify-content: center;
 }
   
-#coin {
-    position: relative;
-    margin: 0 auto;
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-    transition: none; /* Disable transitions during rotation animation */
-}
+  #coin {
+    top: 40%;
+    transition: -webkit-transform 1s ease-in;
+    transform-style: preserve-3d;
+  }
   #coin div {
     position: absolute;
     backface-visibility: hidden;

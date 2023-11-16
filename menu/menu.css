@@ -16,8 +16,10 @@
 
 #home {
     font-size: 36px;
+    user-select: none;
 }
 
 #iconTa {
     margin-left: 15px;
+    user-select: none;
 }}

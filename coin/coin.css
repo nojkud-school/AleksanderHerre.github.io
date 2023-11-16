@@ -14,12 +14,6 @@ body {
     transform: translate(-50%, -50%);
 }
 
-#result_coin1{
-    position: absolute;
-    top: 35%;
-    left: 49.5%;
-    transform: translate(-50%, -50%);
-}
 
 #text{
     text-align: center;
@@ -32,15 +26,15 @@ body {
 }
 
 #heads_result {
+    top: auto;
+    left: auto;
     position: absolute;
     transform: translate(-50%, -50%);
 }
 
 #heads_result {
-    position: absolute;
     top: auto;
     left: 58.5%;
-    transform: translate(-50%, -50%);
 }
 
 #tails_result {

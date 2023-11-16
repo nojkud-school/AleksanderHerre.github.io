@@ -16,8 +16,7 @@ $(document).ready(function ($) {
     
         $('#coin').removeClass();
     
-        // Reset the result text
-        $('#result_coin').text('It is');
+ 
     
         // Add spinning class to initiate the coin flip animation
         $('#coin').addClass('spinning');
@@ -30,17 +29,22 @@ $(document).ready(function ($) {
             // After the animation is complete, update the result text
             if (flipResult <= 0.5) {
                 $('#coin').addClass('heads');
-                $('#result_coin').text('It is heads');
-                headsCount++;
-                console.log('It is head');
+                setTimeout(function () {
+                    $('#result_coin').text('It is heads');
+                    headsCount++;
+                    console.log('It is head');
+                }, 2000); // Adjust the delay duration as needed
             } else {
                 $('#coin').addClass('tails');
-                $('#result_coin').text('It is tails');
-                tailsCount++;
-                console.log('It is tails');
+                setTimeout(function () {
+                    $('#result_coin').text('It is tails');
+                    tailsCount++;
+                    console.log('It is tails');
+                }, 3250); // Adjust the delay duration as needed
             }
-    
-            // Update and display counts
+
+            $('#result_coin').text('It is');
+            // Lokale lagrings plass for Tails og Heads telling. 
             localStorage.setItem('tailsCount', tailsCount);
             localStorage.setItem('headsCount', headsCount);
             $('#tails_result').text('Tails: ' + tailsCount);

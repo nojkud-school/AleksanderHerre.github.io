@@ -7,16 +7,27 @@ $(document).ready(function ($) {
     $('#tails_result').text('Tails: ' + tailsCount);
     $('#heads_result').text('Heads: ' + headsCount);
 
+    // Variable to track the cooldown status
+    var isCooldown = false;
+
     function coinClickHandler() {
+        // Check if cooldown is active, return if true
+        if (isCooldown) {
+            return;
+        }
+
         var flipResult = Math.random();
 
-        // Disable the coin click during the animation
+        // Disable the coin click during the animation and cooldown
         $('#coin').off('click');
 
         $('#coin').removeClass();
 
         // Add spinning class to initiate the coin flip animation
         $('#coin').addClass('spinning');
+
+        // Set cooldown status to true
+        isCooldown = true;
 
         // Delay the code inside setTimeout by 3.25 seconds (3250 milliseconds)
         setTimeout(function () {
@@ -52,8 +63,12 @@ $(document).ready(function ($) {
 
             $('#result_coin').text('It is');
 
-            // Enable the coin click after the animation and text update
-            $('#coin').on('click', coinClickHandler);
+            // Enable the coin click after the animation, text update, and cooldown
+            setTimeout(function () {
+                $('#coin').on('click', coinClickHandler);
+                // Reset cooldown status to false
+                isCooldown = false;
+            }, 3250); // Cooldown duration
         }, 100);
     }
 

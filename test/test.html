@@ -1,21 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <!-- your meta tags and title -->
     <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="menu.css">
 </head>
 
 <body>
-    <div id="coin">
-        <div class="side-a"></div>
-        <div class="side-b"></div>
+    <img id="falling-coin" src="falling-coins.gif"></img>
+    <div id="topBarContainer"></div>
+    <div id="box"></div>
+    <div id="coin" onclick="handleCoinClick()">
+        <div class="side-a">H</div>
+        <div class="side-b">T</div>
     </div>
-    <h1>Click on coin to flip</h1>
+    <h1 id="text">Check for coin flip</h1>
+    <h1 id="result_coin">It is  </h1>
+    <h1 id="tails_result">Tails: </h1>
+    <h1 id="heads_result">Heads: </h1>
+    <button id="reset">Start på Nytt</button>
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="test.js"></script>
+    <script src="menu.js"></script>
 </body>
-
-</html>

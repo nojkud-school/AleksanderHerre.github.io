@@ -1,96 +1,97 @@
 $(document).ready(function ($) {
-    // Initialize counts from local storage or default to 0
+    // Initialiser tellinger fra lokal lagring eller standardverdi 0
     var tailsCount = parseInt(localStorage.getItem('tailsCount')) || 0;
     var headsCount = parseInt(localStorage.getItem('headsCount')) || 0;
 
-    // Display initial counts
+    // Viser initielle tellinger
     $('#tails_result').text('Tails: ' + tailsCount);
     $('#heads_result').text('Heads: ' + headsCount);
 
-    // Variable to track the cooldown status
+    // Variabel for å spore status for ventetids perioden
     var isCooldown = false;
 
     function coinClickHandler() {
-        // Check if cooldown is active, return if true
+        // Sjekk om ventetid er aktiv, returner hvis det er sant
         if (isCooldown) {
             return;
         }
 
         var flipResult = Math.random();
 
-        // Disable the coin click during the animation and cooldown
+        // Deaktiver coinclick under animasjon og ventetid
         $('#coin').off('click');
 
         $('#coin').removeClass();
 
-        // Add spinning class to initiate the coin flip animation
+        // Legg til spinning-class for å starte coin-animation
         $('#coin').addClass('spinning');
 
-        // Set cooldown status to true
+        // Sett vente tid status til ja
         isCooldown = true;
 
-        // Delay the code inside setTimeout by 3.25 seconds (3250 milliseconds)
+        // Forsink koden inne i setTimeout med 3,25 sekunder
         setTimeout(function () {
-            // Remove the spinning class after the animation is complete
+            // Fjern spinning-class etter at animasjonen er ferdig
             $('#coin').removeClass('spinning');
 
-            // After the animation is complete, update the result text and counters
+            // Etter at animasjonen er fullført, oppdater tekstresultatet og tellere
             if (flipResult <= 0.5) {
                 $('#coin').addClass('heads');
                 setTimeout(function () {
-                    $('#result_coin').text('It is heads');
+                    $('#result_coin').text('Det er heads');
                     headsCount++;
-                    console.log('It is head');
-                }, 3250); // Adjust the delay duration as needed
+                    console.log('Det er heads');
+                }, 3250); 
 
-                // Update and display counts with a delay for synchronization
+                // Oppdater og vis tellinger med forsinkelse for synkronisering
                 setTimeout(function () {
                     updateAndDisplayCounts();
-                }, 3250); // Adjust the delay duration as needed
+                }, 3250); 
             } else {
                 $('#coin').addClass('tails');
                 setTimeout(function () {
-                    $('#result_coin').text('It is tails');
+                    $('#result_coin').text('Det er tails');
                     tailsCount++;
-                    console.log('It is tails');
-                }, 3250); // Adjust the delay duration as needed
+                    console.log('Det er tails');
+                }, 3250); 
 
-                // Update and display counts with a delay for synchronization
+                // Oppdater og vis tellinger med forsinkelse for synkronisering
                 setTimeout(function () {
                     updateAndDisplayCounts();
-                }, 3250); // Adjust the delay duration as needed
+                }, 3250); // Justering av forsinkelsesvarighet etter behov
             }
 
-            $('#result_coin').text('It is');
+            $('#result_coin').text('');
 
-            // Enable the coin click after the animation, text update, and cooldown
+            // Aktiver myntklikk etter animasjon, tekstoppdatering og ventetid
             setTimeout(function () {
                 $('#coin').on('click', coinClickHandler);
-                // Reset cooldown status to false
+                // Tilbakestill ventetids til falskt
                 isCooldown = false;
-            }, 3250); // Cooldown duration
+            }, 3250); // Ventetids varighet
         }, 100);
     }
 
-    // Function to update and display counts
+    // Funksjon for å oppdatere og vise tellinger
     function updateAndDisplayCounts() {
-        // Local storage for Tails and Heads counting.
+        // Lokal lagring for telling av Tails eller Heads
         localStorage.setItem('tailsCount', tailsCount);
         localStorage.setItem('headsCount', headsCount);
         $('#tails_result').text('Tails: ' + tailsCount);
         $('#heads_result').text('Heads: ' + headsCount);
     }
 
-    // Attach the click event handler
+    // Fest klikke hendelsen
     $('#coin').on('click', coinClickHandler);
 
-    // Reset button click event
+    // Reset knapp klikke hendelse
     $('#reset').on('click', function () {
-        // Clear local storage
+
+        // Fjern lokal lagring
         localStorage.removeItem('tailsCount');
         localStorage.removeItem('headsCount');
 
-        // Reset counts and display
+        // Tilbakestill tellinger og visning
         tailsCount = 0;
         headsCount = 0;
         $('#tails_result').text('Tails: ' + tailsCount);

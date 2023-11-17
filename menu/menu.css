@@ -1,3 +1,4 @@
+/* TopBar stilen, plassering og utsene*/
 #topBarContainer {
     position: fixed;
     top: 0;
@@ -7,18 +8,19 @@
     background-color: white;
 
 .w3-padding.w3-xlarge a i {
-    font-size: 34px; /* Adjust the font size as needed */
-    vertical-align: middle; /* Align the icons vertically */
+    font-size: 34px;
+    vertical-align: middle; 
     margin-right: -10px;
-    font-weight: bold;
-    /* Adjust the margin to create space between the icons */   
+    font-weight: bold; 
 }
 
+/* Icon størelse */
 #home {
     font-size: 36px;
     user-select: none;
 }
 
+/* Icon størelse */
 #iconTa {
     margin-left: 15px;
     user-select: none;

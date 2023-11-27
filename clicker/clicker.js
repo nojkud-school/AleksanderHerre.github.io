@@ -28,7 +28,7 @@ twoXButton.addEventListener('click', () => {
     } else if (isTwoXUpgraded) {
         alert("Du eier allerede 2x.");
     } else {
-        alert("Skaf deg mer penger.");
+        alert("Skaff deg mer penger.");
     }
 });
 
@@ -46,7 +46,7 @@ autoclickButton.addEventListener('click', () => {
     } else if (isAutoclickUpgraded) {
         alert("Du eier allerede autoclicker.");
     } else {
-        alert("Skaf deg mer penger.");
+        alert("Skaff deg mer penger.");
     }
 });
 
